@@ -1,5 +1,5 @@
 function lastKNumbersSequance(length, k) {
-    
+
     let sequance = [1];
 
     for (let i = 1; i < length; i++) {
@@ -8,9 +8,8 @@ function lastKNumbersSequance(length, k) {
         let lastElements = sequance.slice(index);
         let sum = 0;
         for (let el of lastElements) {
-           sum+= el;   
+            sum += el;
         }
-        
         sequance.push(sum);
     }
 
