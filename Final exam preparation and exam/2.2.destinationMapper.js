@@ -16,6 +16,7 @@ function destinationMapper(input) {
     while (destination) {
         arrayOfDestinations.push(destination.groups['location']);
         destination = pattern.exec(text);
+        
     }
 
     for (const destination of arrayOfDestinations) {
