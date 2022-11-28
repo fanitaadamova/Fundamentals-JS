@@ -49,11 +49,8 @@ function theImitationGame(array) {
     console.log(`The decrypted message is: ${encryptedMessage}`);
 
 }
-theImitationGame([
-    'zzHe',
+theImitationGame(['zzHe',
     'ChangeAll|z|l',
     'Insert|2|o',
     'Move|3',
-    'Decode',
-  ]
-  )
+    'Decode',])
