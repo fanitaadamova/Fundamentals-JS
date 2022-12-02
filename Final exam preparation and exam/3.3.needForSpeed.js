@@ -35,8 +35,7 @@ function needForSpeed(input) {
                     let [mileage, fuelAvailable] = carsInfo[carName];
                     mileage = Number(mileage);
                     fuelAvailable = Number(fuelAvailable);
-                    //console.log(fuelAvailable);
-                    //console.log(needFuel);
+
 
                     if (fuelAvailable < needFuel) {
                         console.log(`Not enough fuel to make that ride`);
@@ -54,6 +53,7 @@ function needForSpeed(input) {
                     }
                 }
                 break;
+
             case 'Refuel':
                 let fuelOfRefuel = Number(currentLine[1]);
                 let [mileage, fuelAvailable] = carsInfo[carName];
@@ -97,7 +97,6 @@ function needForSpeed(input) {
         let [mileage, fuel] = carsInfo[carName];
         console.log(`${carName} -> Mileage: ${mileage} kms, Fuel in the tank: ${fuel} lt.`);
     }
-
 
 
 }
