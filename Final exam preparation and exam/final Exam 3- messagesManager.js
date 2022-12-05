@@ -18,9 +18,7 @@ function messagesManager(input) {
                 let recived = Number(commandArr[2]);
 
                 if (!messageMan.hasOwnProperty(username)) {
-
                     messageMan[username] = [sent, recived];
-
                 }
                 break;
 
