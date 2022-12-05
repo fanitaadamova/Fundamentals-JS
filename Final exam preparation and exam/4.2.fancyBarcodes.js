@@ -31,7 +31,6 @@ function fancyBarcodes(input) {
             console.log(`Invalid barcode`);
         }
 
-
     }
 
 }

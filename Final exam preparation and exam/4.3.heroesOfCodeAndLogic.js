@@ -11,7 +11,6 @@ function heroesOfCodeAndLogic(input) {
         let manaPoints = line[2];
 
         heroesInfo[nameOfHero] = [hitPoints, manaPoints];
-
     }
 
     let commands = array.shift();
@@ -53,8 +52,8 @@ function heroesOfCodeAndLogic(input) {
                     console.log(`${nameOfHero} was hit for ${damage} HP by ${attacker} and now has ${hitPoints} HP left!`);
                     heroesInfo[nameOfHero] = [hitPoints, manaPoints];
                 }
-
                 break;
+
             case 'Recharge':
                 let amount = Number(currentLine[2]);
                 let initialManaPoints = manaPoints;
@@ -67,6 +66,7 @@ function heroesOfCodeAndLogic(input) {
 
                 heroesInfo[nameOfHero] = [hitPoints, manaPoints];
                 break;
+
             case 'Heal':
                 let amountHeal = Number(currentLine[2]);
                 let initialHitPoints = hitPoints;
@@ -80,11 +80,8 @@ function heroesOfCodeAndLogic(input) {
                 heroesInfo[nameOfHero] = [hitPoints, manaPoints];
                 break;
         }
-
-
         commands = array.shift();
     }
-
 
     for (const nameOfHero in heroesInfo) {
         let [hitPoints, manaPoints] = heroesInfo[nameOfHero];
@@ -92,17 +89,17 @@ function heroesOfCodeAndLogic(input) {
         console.log(`  HP: ${hitPoints}`);
         console.log(`  MP: ${manaPoints}`);
     }
-   
+
 }
 heroesOfCodeAndLogic(["4",
-"Adela 90 150",
-"SirMullich 70 40",
-"Ivor 1 111",
-"Tyris 94 61",
-"Heal - SirMullich - 50",
-"Recharge - Adela - 100",
-"CastSpell - Tyris - 1000 - Fireball",
-"TakeDamage - Tyris - 99 - Fireball",
-"TakeDamage - Ivor - 3 - Mosquito",
-"End"
+    "Adela 90 150",
+    "SirMullich 70 40",
+    "Ivor 1 111",
+    "Tyris 94 61",
+    "Heal - SirMullich - 50",
+    "Recharge - Adela - 100",
+    "CastSpell - Tyris - 1000 - Fireball",
+    "TakeDamage - Tyris - 99 - Fireball",
+    "TakeDamage - Ivor - 3 - Mosquito",
+    "End"
 ])
